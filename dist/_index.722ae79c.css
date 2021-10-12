@@ -225,6 +225,7 @@ header .order-link-header:focus {
 @media (min-width: 600px) {
   .main-content {
     margin-left: 2.4rem;
+    margin-bottom: 0;
   }
 }
 .main-content .wrapper {
@@ -303,6 +304,12 @@ header .order-link-header:focus {
   border-bottom-right-radius: 1.25rem;
   margin-left: -1rem;
 }
+@media (min-width: 600px) {
+  .main-content .keyboard-phone {
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+  }
+}
 .main-content .keyboard-phone img {
   height: 12.1rem;
   width: 100%;
@@ -315,6 +322,8 @@ header .order-link-header:focus {
 @media (min-width: 600px) {
   .main-content .keyboard-phone img {
     height: 20rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
   }
 }
 .main-content .keyboard-glass {
@@ -346,6 +355,7 @@ header .order-link-header:focus {
     padding-right: 0;
     margin-top: 4.5rem;
     margin-bottom: 8.9rem;
+    text-align: left;
   }
 }
 .main-content .product-description h2 {
@@ -355,7 +365,7 @@ header .order-link-header:focus {
 @media (min-width: 600px) {
   .main-content .product-description h2 {
     padding-left: 0;
-    margin-right: 2.25rem;
+    margin-right: 4rem;
     font-size: 2rem;
   }
 }
@@ -368,6 +378,12 @@ header .order-link-header:focus {
   max-width: 21rem;
   margin-bottom: 4rem;
   text-align: center;
+}
+@media (min-width: 600px) {
+  .features .card {
+    text-align: left;
+    padding-right: 4rem;
+  }
 }
 .features .card .image-container {
   background-color: #f06819;
@@ -384,6 +400,12 @@ header .order-link-header:focus {
   padding-left: clamp(1em, 1.5em + 4vw, 2em);
   padding-right: clamp(1em, 1.5em + 4vw, 2em);
   margin-bottom: 1.5rem;
+}
+@media (min-width: 600px) {
+  .features .card h3 {
+    padding-left: 0;
+    padding-right: 3.5rem;
+  }
 }
 .features .card p {
   color: #7b8cad;
@@ -510,9 +532,7 @@ header .wrapper {
 }
 @media (min-width: 600px) {
   .features .card {
-    flex-flow: row wrap;
     align-items: flex-start;
-    justify-content: flex-start;
   }
 }
 .features .card .image-container {

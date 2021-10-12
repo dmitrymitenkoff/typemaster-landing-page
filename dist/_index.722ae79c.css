@@ -1,0 +1,524 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  overflow-x: hidden;
+  font-family: "Barlow", sans-serif;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(3rem, 2.47rem + 4vw, 3.5rem);
+  max-width: 25ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 2rem + 4vw, 2.5rem);
+  max-width: 25ch;
+}
+
+h3 {
+  max-width: 20ch;
+  font-size: clamp(1.3rem, 1.3rem + 1.2vw, 1.6rem);
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+.skip-link {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  background: white;
+  color: #162441;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.skip-link:hover {
+  background: #162441;
+  color: white;
+}
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #162441;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+header .wrapper {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  max-width: 21rem;
+}
+@media (min-width: 600px) {
+  header .wrapper {
+    max-width: 50rem;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+}
+header .order-link-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.69rem 0.91rem;
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: 220ms all ease-in-out;
+  background-color: #e8eff2;
+  color: #162441;
+}
+header .order-link-header:hover, header .order-link-header:active {
+  background-color: #162441;
+  color: white;
+}
+header .order-link-header:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 2px #162441;
+}
+
+.main-content {
+  margin-bottom: 6.9rem;
+}
+@media (min-width: 600px) {
+  .main-content {
+    margin-left: 2.4rem;
+  }
+}
+.main-content .wrapper {
+  margin-bottom: 4rem;
+  max-width: 21rem;
+}
+@media (min-width: 600px) {
+  .main-content .wrapper {
+    max-width: 21.2rem;
+    margin-left: 2.4rem;
+  }
+}
+.main-content .wrapper h1 {
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.main-content .wrapper p {
+  font-weight: 500;
+  line-height: 1.6;
+  color: #7b8cad;
+  margin-bottom: 2rem;
+}
+.main-content .wrapper .order-link-body {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.69rem 0.91rem;
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: 220ms all ease-in-out;
+  background-color: #f06819;
+  color: white;
+}
+@media (min-width: 600px) {
+  .main-content .wrapper .order-link-body {
+    display: inline-block;
+  }
+}
+.main-content .wrapper .order-link-body:hover, .main-content .wrapper .order-link-body:active {
+  background-color: #ff9b61;
+  color: white;
+}
+.main-content .wrapper .order-link-body:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 2px #ff9b61;
+}
+.main-content .wrapper span {
+  font-weight: 700;
+  color: #7b8cad;
+  text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  .main-content .wrapper span {
+    display: inline-block;
+  }
+}
+.main-content .keyboard {
+  margin-left: 1rem;
+}
+.main-content .keyboard img {
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  height: 100%;
+}
+.main-content .keyboard-phone {
+  background-color: #f06819;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  margin-left: -1rem;
+}
+.main-content .keyboard-phone img {
+  height: 12.1rem;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+@media (min-width: 600px) {
+  .main-content .keyboard-phone img {
+    height: 20rem;
+  }
+}
+.main-content .keyboard-glass {
+  margin-right: 1.5rem;
+}
+.main-content .keyboard-glass img {
+  height: 12.1rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+@media (min-width: 600px) {
+  .main-content .keyboard-glass img {
+    height: 20rem;
+  }
+}
+.main-content .product-description {
+  text-align: center;
+  max-width: 21rem;
+  padding-left: clamp(1em, 1.5em + 4vw, 2em);
+  padding-right: clamp(1em, 1.5em + 4vw, 2em);
+  margin-top: 4.7rem;
+  margin-bottom: clamp(1.2rem, 1.4rem + 1vh, 1.7rem);
+}
+@media (min-width: 600px) {
+  .main-content .product-description {
+    max-width: 43.1rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 4.5rem;
+    margin-bottom: 8.9rem;
+  }
+}
+.main-content .product-description h2 {
+  text-transform: uppercase;
+  color: #162441;
+}
+@media (min-width: 600px) {
+  .main-content .product-description h2 {
+    padding-left: 0;
+    margin-right: 2.25rem;
+    font-size: 2rem;
+  }
+}
+.main-content .product-description p {
+  color: #7b8cad;
+  line-height: 1.6;
+}
+
+.features .card {
+  max-width: 21rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.features .card .image-container {
+  background-color: #f06819;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+.features .card h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  padding-left: clamp(1em, 1.5em + 4vw, 2em);
+  padding-right: clamp(1em, 1.5em + 4vw, 2em);
+  margin-bottom: 1.5rem;
+}
+.features .card p {
+  color: #7b8cad;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  color: #7b8cad;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3.1rem;
+}
+.footer span {
+  font-weight: 700;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 12.1rem;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .main-content {
+    grid-template-columns: 13.4rem 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20rem auto;
+  }
+}
+.main-content .wrapper {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .main-content .wrapper {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+.main-content .keyboard {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+@media (min-width: 600px) {
+  .main-content .keyboard {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+}
+.main-content .keyboard-phone {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+@media (min-width: 600px) {
+  .main-content .keyboard-phone {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+.main-content .keyboard-glass {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+@media (min-width: 600px) {
+  .main-content .keyboard-glass {
+    grid-column: 2/5;
+    grid-row: 2/3;
+  }
+}
+.main-content .product-description {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 600px) {
+  .main-content .product-description {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  .main-content .product-description p,
+.main-content .product-description h2 {
+    align-self: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .features {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+}
+.features .card {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .features .card {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.features .card .image-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=/_index.722ae79c.css.map */

@@ -1,0 +1,145 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.main-content {
+  margin-bottom: $margin-xlg;
+
+  @include responsive(tablet) {
+    margin-left: $margin-sm;
+  }
+
+  .wrapper {
+    margin-bottom: $margin-md;
+    max-width: 21rem;
+
+    @include responsive(tablet) {
+      max-width: 21.2rem;
+      margin-left: $margin-sm;
+    }
+
+    h1 {
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: $margin-paragraph-sm;
+    }
+
+    p {
+      font-weight: 500;
+      line-height: 1.6;
+      color: $color-text;
+      margin-bottom: $margin-paragraph-sm;
+    }
+
+    .order-link-body {
+      @include orderButton;
+      background-color: $color-button-primary-normal;
+      color: $color-light;
+
+      @include responsive(tablet) {
+        display: inline-block;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-button-primary-hover;
+        color: $color-light;
+      }
+
+      &:focus {
+        @include orderButtonFocus;
+        box-shadow: 0 0 0 2px $color-button-primary-hover;
+      }
+    }
+
+    span {
+      font-weight: 700;
+      color: $color-text;
+      text-transform: uppercase;
+      @include responsive(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .keyboard {
+    margin-left: 1rem;
+
+    img {
+      border-top-left-radius: 1.25rem;
+      border-bottom-left-radius: 1.25rem;
+      height: 100%;
+    }
+  }
+
+  .keyboard-phone {
+    background-color: $color-button-primary-normal;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    margin-left: -1rem;
+    // @include responsive(tablet) {
+    //   height: 20rem;
+    //   width: 80%;
+    // }
+
+    img {
+      height: 12.1rem;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+      border-top-right-radius: 1.25rem;
+      border-bottom-right-radius: 1.25rem;
+
+      @include responsive(tablet) {
+        height: 20rem;
+      }
+    }
+  }
+
+  .keyboard-glass {
+    margin-right: 1.5rem;
+
+    img {
+      height: 12.1rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1.25rem;
+      @include responsive(tablet) {
+        height: 20rem;
+      }
+    }
+  }
+
+  .product-description {
+    text-align: center;
+    max-width: 21rem;
+    padding-left: clamp(1em, 1.5em + 4vw, 2em);
+    padding-right: clamp(1em, 1.5em + 4vw, 2em);
+    margin-top: $margin-lg;
+    margin-bottom: clamp(1.2rem, 1.4rem + 1vh, 1.7rem);
+
+    @include responsive(tablet) {
+      max-width: 43.1rem;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 4.5rem;
+      margin-bottom: 8.9rem;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      color: $color-headings;
+      @include responsive(tablet) {
+        padding-left: 0;
+        margin-right: 2.25rem;
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      color: $color-text;
+      line-height: 1.6;
+    }
+  }
+}

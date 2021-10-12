@@ -1,0 +1,33 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+header {
+  .wrapper {
+    margin-top: $margin-paragraph-sm;
+    margin-bottom: $margin-md;
+    max-width: 21rem;
+
+    @include responsive(tablet) {
+      max-width: 50rem;
+      margin-left: $margin-sm;
+      margin-right: $margin-sm;
+    }
+  }
+
+  .order-link-header {
+    @include orderButton;
+    background-color: $color-button-secondary-normal;
+    color: $color-headings;
+
+    &:hover,
+    &:active {
+      background-color: $color-button-secondary-hover;
+      color: $color-light;
+    }
+
+    &:focus {
+      @include orderButtonFocus;
+      box-shadow: 0 0 0 2px $color-button-secondary-hover;
+    }
+  }
+}

@@ -3,15 +3,15 @@
 
 header {
   .wrapper {
-    margin-top: $margin-paragraph-sm;
-    margin-bottom: $margin-md;
-    max-width: 21rem;
+    outline: 2px solid blue;
+    width: clamp(21rem, 85vw, 70rem);
+    margin-top: 1.4rem;
+    margin-bottom: 4rem;
 
-    @include responsive(tablet) {
-      max-width: 50rem;
-      margin-left: $margin-sm;
-      margin-right: $margin-sm;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include centre;
   }
 
   .order-link-header {

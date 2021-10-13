@@ -1,0 +1,22 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.product-description {
+  outline: sandybrown 2px solid;
+  text-align: center;
+  width: clamp(21rem, 85vw, 70rem);
+  margin-top: 4.7rem;
+  margin-bottom: 6.9rem;
+  @include centre;
+
+  h2 {
+    text-transform: uppercase;
+    color: $color-headings;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: $color-text;
+    line-height: 1.6;
+  }
+}

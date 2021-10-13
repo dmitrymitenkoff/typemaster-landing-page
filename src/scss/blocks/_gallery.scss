@@ -1,0 +1,42 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.keyboard {
+  margin-left: 1rem;
+
+  img {
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    height: 100%;
+  }
+}
+
+.keyboard-phone {
+  background-color: $color-button-primary-normal;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  margin-left: -1rem;
+
+  flex-basis: 35%;
+
+  img {
+    height: 12.1rem;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    mix-blend-mode: multiply;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+}
+
+.keyboard-glass {
+  flex-basis: 62%;
+
+  img {
+    height: 12.1rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.25rem;
+  }
+}

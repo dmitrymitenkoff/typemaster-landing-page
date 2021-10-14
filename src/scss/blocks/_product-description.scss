@@ -4,19 +4,39 @@
 .product-description {
   outline: sandybrown 2px solid;
   text-align: center;
-  width: clamp(21rem, 85vw, 70rem);
-  margin-top: 4.7rem;
-  margin-bottom: 6.9rem;
-  @include centre;
+  // width: clamp(21rem, 85vw, 70rem);
+  // margin-top: 4.7rem;
+  // margin-bottom: 6.9rem;
+  // @include centre;
+
+  // @include responsive(medium) {
+  //   text-align: left;
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+
+  // @include responsive(desktop) {
+  //   flex-basis: 30%;
+  //   flex-direction: column;
+  //   margin-left: 5%;
+  // }
 
   h2 {
     text-transform: uppercase;
     color: $color-headings;
     margin-bottom: 1.5rem;
+
+    // @include responsive(medium) {
+    //   padding-right: 2rem;
+    // }
   }
 
   p {
     color: $color-text;
     line-height: 1.6;
+
+    // @include responsive(medium) {
+    //   align-self: center;
+    // }
   }
 }

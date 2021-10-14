@@ -1,42 +1,91 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/variables' as *;
 
-.keyboard {
-  margin-left: 1rem;
+// .keyboard {
+//   // margin-left: 1rem;
 
-  img {
-    border-top-left-radius: 1.25rem;
-    border-bottom-left-radius: 1.25rem;
-    height: 100%;
-  }
-}
+//   // @include responsive(medium) {
+//   //   flex-basis: 40vw;
+//   // }
 
-.keyboard-phone {
-  background-color: $color-button-primary-normal;
-  border-top-right-radius: 1.25rem;
-  border-bottom-right-radius: 1.25rem;
-  margin-left: -1rem;
+//   // @include responsive(desktop) {
+//   //   flex-basis: 42%;
+//   //   margin-right: auto;
+//   //   border-radius: 1.25rem;
+//   // }
 
-  flex-basis: 35%;
+//   img {
+//     // border-top-left-radius: 1.25rem;
+//     // border-bottom-left-radius: 1.25rem;
+//     // height: 100%;
 
-  img {
-    height: 12.1rem;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.75;
-    mix-blend-mode: multiply;
-    border-top-right-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
-  }
-}
+//     // @include responsive(desktop) {
+//     //   border-radius: 1.25rem;
+//     // }
+//   }
+// }
 
-.keyboard-glass {
-  flex-basis: 62%;
+// .keyboard-phone {
+//   background-color: $color-button-primary-normal;
+//   border-top-right-radius: 1.25rem;
+//   border-bottom-right-radius: 1.25rem;
+//   // margin-left: -5rem;
+//   // flex-basis: 35%;
 
-  img {
-    height: 12.1rem;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1.25rem;
-  }
-}
+//   // @include responsive(medium) {
+//   //   flex-basis: 25vw;
+//   //   margin-left: auto;
+//   //   border-radius: 1.25rem;
+//   // }
+
+//   // @include responsive(desktop) {
+//   //   // flex-basis: 22%;
+//   // }
+
+//   img {
+//     // height: 12.1rem;
+//     // width: 100%;
+//     // object-fit: cover;
+//     // opacity: 0.75;
+//     // mix-blend-mode: multiply;
+//     // border-top-right-radius: 1.25rem;
+//     // border-bottom-right-radius: 1.25rem;
+
+//     // @include responsive(medium) {
+//     //   border-radius: 1.25rem;
+//     //   height: 320px;
+//     // }
+
+//     // @include responsive(desktop) {
+//     //   height: 30rem;
+//     // }
+//   }
+// }
+
+// .keyboard-glass {
+//   // flex-basis: 62%;
+
+//   // @include responsive(medium) {
+//   //   flex-basis: 60vw;
+//   //   margin-right: auto;
+//   // }
+
+//   // @include responsive(desktop) {
+//   //   flex-basis: 40%;
+//   // }
+
+//   img {
+//     height: 12.1rem;
+//     width: 100%;
+//     object-fit: cover;
+//     border-radius: 1.25rem;
+
+//     @include responsive(medium) {
+//       border-radius: 1.25rem;
+//       height: 320px;
+//     }
+//     @include responsive(desktop) {
+//       height: 30rem;
+//     }
+//   }
+// }

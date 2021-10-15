@@ -2,7 +2,7 @@
 @use '../utilities/variables' as *;
 
 .product-description {
-  outline: sandybrown 2px solid;
+  // outline: sandybrown 2px solid;
   text-align: center;
   // width: clamp(21rem, 85vw, 70rem);
   // margin-top: 4.7rem;
@@ -26,17 +26,21 @@
     color: $color-headings;
     margin-bottom: 1.5rem;
 
-    // @include responsive(medium) {
-    //   padding-right: 2rem;
-    // }
+    @include responsive(medium) {
+      padding-right: 2rem;
+    }
+
+    @include responsive(lg) {
+      padding-right: 0;
+    }
   }
 
   p {
     color: $color-text;
     line-height: 1.6;
 
-    // @include responsive(medium) {
-    //   align-self: center;
-    // }
+    @include responsive(medium) {
+      align-self: center;
+    }
   }
 }

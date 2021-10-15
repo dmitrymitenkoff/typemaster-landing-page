@@ -3,7 +3,7 @@
 
 .features {
   // width: clamp(21rem, 85vw, 70rem);
-  outline: blue 2px solid;
+  // outline: blue 2px solid;
   // margin-left: auto;
   // margin-right: auto;
 
@@ -13,7 +13,7 @@
     align-items: center;
     margin-bottom: $margin-md;
     text-align: center;
-    outline: 2px solid red;
+    // outline: 2px solid red;
 
     @include responsive(small) {
       // flex-basis: 35vw;

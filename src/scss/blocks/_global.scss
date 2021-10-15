@@ -2,6 +2,9 @@
 @use '../utilities/mixins' as *;
 
 body {
+  display: grid;
+  place-content: center;
+
   overflow-x: hidden;
   font-family: $barlow;
   height: 100%;

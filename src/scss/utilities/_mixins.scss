@@ -1,8 +1,11 @@
+@use '../utilities/variables' as *;
+
 @mixin centre {
   margin-left: auto;
   margin-right: auto;
 }
 
+// BUTTON
 @mixin orderButton {
   display: inline-flex;
   align-items: center;
@@ -23,6 +26,38 @@
   outline-color: transparent;
 }
 
+// DECORATIVE SIDE BOXES FOR LARGE DISPLAYS
+@mixin decorativeBox {
+  width: 8rem;
+  height: 15rem;
+  background-color: $color-button-secondary-normal;
+  position: absolute;
+  border-radius: 1.25rem;
+}
+
+// MARGINS
+@mixin mobileMargins {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@mixin lgMargins {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+@mixin xlMargins {
+  margin-left: 10.3rem;
+  margin-right: 10.3rem;
+}
+
+// IMAGES
+@mixin imgSizing {
+  width: 100%;
+  object-fit: cover;
+}
+
+// MEDIA QUERIES
 @mixin responsive($breakpoint) {
   @if $breakpoint == small {
     @media (min-width: 450px) {

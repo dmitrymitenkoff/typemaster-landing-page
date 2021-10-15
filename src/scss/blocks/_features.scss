@@ -2,10 +2,22 @@
 @use '../utilities/variables' as *;
 
 .features {
-  // width: clamp(21rem, 85vw, 70rem);
-  // outline: blue 2px solid;
-  // margin-left: auto;
-  // margin-right: auto;
+  @include mobileMargins;
+
+  @include responsive(small) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 1rem;
+  }
+
+  @include responsive(lg) {
+    @include lgMargins;
+  }
+
+  @include responsive(xl) {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    @include xlMargins;
+  }
 
   .card {
     display: flex;
@@ -13,10 +25,8 @@
     align-items: center;
     margin-bottom: $margin-md;
     text-align: center;
-    // outline: 2px solid red;
 
     @include responsive(small) {
-      // flex-basis: 35vw;
       align-items: flex-start;
       text-align: left;
       padding: 0;
@@ -45,12 +55,19 @@
       @include responsive(small) {
         padding-left: 0;
       }
+      @include responsive(xl) {
+        max-width: 19ch;
+      }
     }
 
     p {
       color: $color-text;
       line-height: 1.6;
       margin-bottom: $margin-md;
+
+      @include responsive(xl) {
+        max-width: 26ch;
+      }
     }
   }
 }

@@ -2,32 +2,26 @@
 @use '../utilities/variables' as *;
 
 header {
-  .wrapper {
-    // outline: 2px solid blue;
-    // width: clamp(21rem, 85vw, 70rem);
-    // margin-top: 1.4rem;
-    // margin-bottom: 4rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  @include mobileMargins;
 
+  @include responsive(lg) {
+    margin-top: 3.4rem;
+    margin-bottom: 5rem;
+    @include lgMargins;
+  }
+
+  @include responsive(xl) {
+    margin-bottom: 5.2rem;
+    @include xlMargins;
+  }
+
+  .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include centre;
-  }
-
-  .order-link-header {
-    @include orderButton;
-    background-color: $color-button-secondary-normal;
-    color: $color-headings;
-
-    &:hover,
-    &:active {
-      background-color: $color-button-secondary-hover;
-      color: $color-light;
-    }
-
-    &:focus {
-      @include orderButtonFocus;
-      box-shadow: 0 0 0 2px $color-button-secondary-hover;
-    }
   }
 }

@@ -1,0 +1,36 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.order-link-header {
+  @include orderButton;
+  background-color: $color-button-secondary-normal;
+  color: $color-headings;
+
+  &:hover,
+  &:active {
+    background-color: $color-button-secondary-hover;
+    color: $color-light;
+  }
+
+  &:focus {
+    @include orderButtonFocus;
+    box-shadow: 0 0 0 2px $color-button-secondary-hover;
+  }
+}
+
+.order-link-body {
+  @include orderButton;
+  background-color: $color-button-primary-normal;
+  color: $color-light;
+
+  &:hover,
+  &:active {
+    background-color: $color-button-primary-hover;
+    color: $color-light;
+  }
+
+  &:focus {
+    @include orderButtonFocus;
+    box-shadow: 0 0 0 2px $color-button-primary-hover;
+  }
+}
